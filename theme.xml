@@ -1,0 +1,238 @@
+<!--
+    CRT Dream theme for EmulationStation Desktop Edition (crt-grid-es-de)
+    Author: Jake Wilson
+    Based on: slate-es-de
+-->
+
+<theme>
+    <include>./navigationsounds.xml</include>
+    <include>./colors.xml</include>
+
+    <!-- Per-system band colors and platform info -->
+    <include>./${system.theme}/colors.xml</include>
+    <!-- <include>./${system.theme}/systeminfo.xml</include> -->
+
+    <variables>
+        <regularFont>./core/fonts/Exo2-RegularCondensed.otf</regularFont>
+        <semiBoldFont>./core/fonts/Exo2-SemiBoldCondensed.otf</semiBoldFont>
+        <boldFont>./core/fonts/Exo2-BoldCondensed.otf</boldFont>
+        <systemConsoleImage>./${system.theme}/images/consolegame.svg</systemConsoleImage>
+        <systemControllerImage>./${system.theme}/images/controller.svg</systemControllerImage>
+        <systemLogo>./${system.theme}/images/logo.svg</systemLogo>
+    </variables>
+
+    <!-- <aspectRatio name="16:9">
+        <include>./aspect-ratio-16-9.xml</include>
+    </aspectRatio>
+    <aspectRatio name="16:9_vertical">
+        <include>./aspect-ratio-16-9-vertical.xml</include>
+    </aspectRatio>
+    <aspectRatio name="4:3">
+        <include>./aspect-ratio-4-3.xml</include>
+    </aspectRatio>
+    <aspectRatio name="4:3_vertical">
+        <include>./aspect-ratio-4-3-vertical.xml</include>
+    </aspectRatio> -->
+
+    <view name="system, gamelist">
+        <!-- <image name="background">
+            <pos>0 0</pos>
+            <size>1 1</size>
+            <path>./core/images/background.png</path>
+            <tile>true</tile>
+            <color>${backgroundColor}</color>
+            <zIndex>0</zIndex>
+        </image>
+        <image name="consolegame">
+            <pos>0.02 0.17</pos>
+            <maxSize>0.4 0.15</maxSize>
+            <origin>0 1</origin>
+            <path>${systemConsoleImage}</path>
+        </image>
+        <image name="band1">
+            <pos>0.80 0</pos>
+            <size>0.03 1</size>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image>
+        <image name="band2">
+            <pos>0.829 0</pos>
+            <size>0.03 1</size>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image>
+        <image name="band3">
+            <pos>0.858 0</pos>
+            <size>0.03 1</size>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image>
+        <image name="band4">
+            <pos>0.887 0</pos>
+            <size>0.03 1</size>
+            <path>./core/images/band.png</path>
+            <zIndex>5</zIndex>
+        </image> -->
+    </view>
+
+    <view name="system">
+        <grid name="systemGrid">
+            <pos>0.5 0.2</pos>
+            <size>0.86 0.715</size>
+            <origin>0.5 0</origin>
+            <staticImage>./${system.theme}/images/logo.svg</staticImage>
+            <itemSize>0.151 -1</itemSize>
+            <itemScale>1.1</itemScale>
+            <itemSpacing>0.022 -1</itemSpacing>
+            <fractionalRows>true</fractionalRows>
+            <itemTransitions>animate</itemTransitions>
+            <rowTransitions>animate</rowTransitions>
+            <unfocusedItemOpacity>1.0</unfocusedItemOpacity>
+            <imageRelativeScale>0.9</imageRelativeScale>
+            <imageFit>contain</imageFit>
+            <backgroundImage>./core/images/grid_frame.svg</backgroundImage>
+            <backgroundRelativeScale>1.0</backgroundRelativeScale>
+            <backgroundColor>424242</backgroundColor>
+            <selectorImage>./core/images/grid_frame.svg</selectorImage>
+            <selectorRelativeScale>1.0</selectorRelativeScale>
+            <selectorLayer>middle</selectorLayer>
+            <selectorColor>FF3333</selectorColor>
+            <textRelativeScale>0.8</textRelativeScale>
+            <textColor>F0F0F0</textColor>
+            <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontSize>0.032</fontSize>
+            <letterCase>uppercase</letterCase>
+            <lineSpacing>1.2</lineSpacing>
+            <fadeAbovePrimary>true</fadeAbovePrimary>
+        </grid>
+        <!-- <image name="controller">
+            <pos>0.78 0.17</pos>
+            <maxSize>0.1 0.15</maxSize>
+            <origin>1 1</origin>
+            <path>${systemControllerImage}</path>
+        </image>
+        <image name="backframe2">
+            <pos>0.5 0.19</pos>
+            <size>0.96 0.735</size>
+            <origin>0.5 0</origin>
+            <path>./core/images/frame.png</path>
+            <color>181818</color>
+            <zIndex>10</zIndex>
+        </image>
+        <text name="gameCounter">
+            <pos>0.8 0.145</pos>
+            <size>0.117 0.056</size>
+            <origin>0 0.5</origin>
+            <systemdata>gamecountGames</systemdata>
+            <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontSize>0.035</fontSize>
+            <horizontalAlignment>center</horizontalAlignment>
+            <color>DDDDDD</color>
+            <backgroundColor>262626DD</backgroundColor>
+            <letterCase>uppercase</letterCase>
+            <zIndex>50</zIndex>
+        </text> -->
+        <helpsystem name="help">
+            <pos>0.012 0.955</pos>
+            <textColor>${gamelistHelpColor}</textColor>
+            <iconColor>${gamelistHelpColor}</iconColor>
+            <textColorDimmed>${gamelistHelpColorDimmed}</textColorDimmed>
+            <iconColorDimmed>${gamelistHelpColorDimmed}</iconColorDimmed>
+        </helpsystem>
+    </view>
+
+    <view name="gamelist">
+        <grid name="gamelistGrid">
+            <pos>0.5 0.23</pos>
+            <size>0.86 0.75</size>
+            <origin>0.5 0</origin>
+            <imageType>screenshot</imageType>
+            <itemSize>0.12 -1</itemSize>
+            <itemScale>1</itemScale>
+            <itemSpacing>0.022 -1</itemSpacing>
+            <fractionalRows>false</fractionalRows>
+            <itemTransitions>animate</itemTransitions>
+            <rowTransitions>animate</rowTransitions>
+            <unfocusedItemOpacity>1.0</unfocusedItemOpacity>
+            <imageRelativeScale>0.9</imageRelativeScale>
+            <imageFit>contain</imageFit>
+            <backgroundImage>./core/images/grid_frame.svg</backgroundImage>
+            <backgroundRelativeScale>1.0</backgroundRelativeScale>
+            <backgroundColor>424242</backgroundColor>
+            <selectorImage>./core/images/grid_frame.svg</selectorImage>
+            <selectorRelativeScale>1.0</selectorRelativeScale>
+            <selectorLayer>middle</selectorLayer>
+            <selectorColor>FF3333</selectorColor>
+            <textRelativeScale>0.8</textRelativeScale>
+            <textColor>F0F0F0</textColor>
+            <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontSize>0.032</fontSize>
+            <letterCase>uppercase</letterCase>
+            <lineSpacing>1.2</lineSpacing>
+        </grid>
+
+        <!-- <image name="backframe2">
+            <pos>0.5 0.19</pos>
+            <size>0.96 0.735</size>
+            <origin>0.5 0</origin>
+            <path>./core/images/frame.png</path>
+            <color>181818</color>
+            <zIndex>10</zIndex>
+        </image>
+        <image name="logo">
+            <pos>0.78 0.17</pos>
+            <maxSize>0.32 0.13</maxSize>
+            <origin>1 1</origin>
+            <path>${systemLogo}</path>
+        </image>
+        <text name="gameName">
+            <pos>0.92 0.225</pos>
+            <size>0.55 0.08</size>
+            <origin>1 0</origin>
+            <metadata>name</metadata>
+            <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontSize>0.045</fontSize>
+            <horizontalAlignment>right</horizontalAlignment>
+            <verticalAlignment>center</verticalAlignment>
+            <color>D6D6D6</color>
+            <letterCase>none</letterCase>
+            <zIndex>80</zIndex>
+        </text>
+        <text name="description">
+            <pos>0.025 0.205</pos>
+            <size>0.446 0.185</size>
+            <fontSize>0.02</fontSize>
+            <lineSpacing>1.2</lineSpacing>
+        </text>
+        <gamelistinfo name="gamelistInfo">
+            <pos>0.773 0.192</pos>
+            <size>0.2 0.042</size>
+            <fontPath>./core/fonts/Exo2-BoldCondensed.otf</fontPath>
+            <fontSize>0.025</fontSize>
+            <horizontalAlignment>right</horizontalAlignment>
+            <color>888888</color>
+        </gamelistinfo>
+        <badges name="badges">
+            <pos>0.03 0.205</pos>
+            <size>0.38 0.08</size>
+            <horizontalAlignment>left</horizontalAlignment>
+            <direction>row</direction>
+            <lines>1</lines>
+            <itemsPerLine>10</itemsPerLine>
+            <slots>collection, folder, favorite, completed, kidgame, broken, controller, altemulator, manual</slots>
+            <controllerPos>0.5 0.572</controllerPos>
+            <controllerSize>0.81</controllerSize>
+            <folderLinkPos>0.54 0.64</folderLinkPos>
+            <folderLinkSize>0.31</folderLinkSize>
+            <itemMargin>-1.0 0.005</itemMargin>
+        </badges> -->
+        <helpsystem name="help">
+            <pos>0.012 0.955</pos>
+            <textColor>${gamelistHelpColor}</textColor>
+            <iconColor>${gamelistHelpColor}</iconColor>
+            <textColorDimmed>${gamelistHelpColorDimmed}</textColorDimmed>
+            <iconColorDimmed>${gamelistHelpColorDimmed}</iconColorDimmed>
+        </helpsystem>
+    </view>
+
+</theme>
