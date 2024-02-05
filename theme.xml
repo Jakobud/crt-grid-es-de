@@ -9,16 +9,16 @@
     <include>./colors.xml</include>
 
     <!-- Per-system band colors and platform info -->
-    <include>./${system.theme}/colors.xml</include>
+    <include>./systems/${system.theme}/colors.xml</include>
     <!-- <include>./${system.theme}/systeminfo.xml</include> -->
 
     <variables>
-        <regularFont>./core/fonts/Exo2-RegularCondensed.otf</regularFont>
-        <semiBoldFont>./core/fonts/Exo2-SemiBoldCondensed.otf</semiBoldFont>
-        <boldFont>./core/fonts/Exo2-BoldCondensed.otf</boldFont>
-        <systemConsoleImage>./${system.theme}/images/consolegame.svg</systemConsoleImage>
-        <systemControllerImage>./${system.theme}/images/controller.svg</systemControllerImage>
-        <systemLogo>./${system.theme}/images/logo.svg</systemLogo>
+        <regularFont>./fonts/Exo2-RegularCondensed.otf</regularFont>
+        <semiBoldFont>./fonts/Exo2-SemiBoldCondensed.otf</semiBoldFont>
+        <boldFont>./fonts/Exo2-BoldCondensed.otf</boldFont>
+        <systemConsoleImage>./systems/${system.theme}/images/consolegame.svg</systemConsoleImage>
+        <systemControllerImage>./systems/${system.theme}/images/controller.svg</systemControllerImage>
+        <systemLogo>./systems/${system.theme}/images/logo.svg</systemLogo>
     </variables>
 
     <!-- <aspectRatio name="16:9">
@@ -80,7 +80,7 @@
             <pos>0.5 0.2</pos>
             <size>0.86 0.715</size>
             <origin>0.5 0</origin>
-            <staticImage>./${system.theme}/images/logo.svg</staticImage>
+            <staticImage>./systems/${system.theme}/images/logo.svg</staticImage>
             <itemSize>0.151 -1</itemSize>
             <itemScale>1.1</itemScale>
             <itemSpacing>0.022 -1</itemSpacing>
@@ -90,16 +90,16 @@
             <unfocusedItemOpacity>1.0</unfocusedItemOpacity>
             <imageRelativeScale>0.9</imageRelativeScale>
             <imageFit>contain</imageFit>
-            <backgroundImage>./core/images/grid_frame.svg</backgroundImage>
+            <backgroundImage>./images/grid_frame.svg</backgroundImage>
             <backgroundRelativeScale>1.0</backgroundRelativeScale>
             <backgroundColor>424242</backgroundColor>
-            <selectorImage>./core/images/grid_frame.svg</selectorImage>
+            <selectorImage>./images/grid_frame.svg</selectorImage>
             <selectorRelativeScale>1.0</selectorRelativeScale>
             <selectorLayer>middle</selectorLayer>
             <selectorColor>FF3333</selectorColor>
             <textRelativeScale>0.8</textRelativeScale>
             <textColor>F0F0F0</textColor>
-            <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontPath>./fonts/Exo2-RegularCondensed.otf</fontPath>
             <fontSize>0.032</fontSize>
             <letterCase>uppercase</letterCase>
             <lineSpacing>1.2</lineSpacing>
@@ -143,11 +143,11 @@
 
     <view name="gamelist">
         <grid name="gamelistGrid">
-            <pos>0.5 0.23</pos>
-            <size>0.86 0.75</size>
+            <pos>0.51 0.05</pos>
+            <size>.9 .8</size>
             <origin>0.5 0</origin>
-            <imageType>screenshot</imageType>
-            <itemSize>0.12 -1</itemSize>
+            <imageType>titlescreen</imageType>
+            <itemSize>0.13 -1</itemSize>
             <itemScale>1</itemScale>
             <itemSpacing>0.022 -1</itemSpacing>
             <fractionalRows>false</fractionalRows>
@@ -156,16 +156,16 @@
             <unfocusedItemOpacity>1.0</unfocusedItemOpacity>
             <imageRelativeScale>0.9</imageRelativeScale>
             <imageFit>contain</imageFit>
-            <backgroundImage>./core/images/grid_frame.svg</backgroundImage>
+            <backgroundImage>./images/grid_frame.svg</backgroundImage>
             <backgroundRelativeScale>1.0</backgroundRelativeScale>
             <backgroundColor>424242</backgroundColor>
-            <selectorImage>./core/images/grid_frame.svg</selectorImage>
+            <selectorImage>./images/grid_frame.svg</selectorImage>
             <selectorRelativeScale>1.0</selectorRelativeScale>
             <selectorLayer>middle</selectorLayer>
             <selectorColor>FF3333</selectorColor>
             <textRelativeScale>0.8</textRelativeScale>
             <textColor>F0F0F0</textColor>
-            <fontPath>./core/fonts/Exo2-RegularCondensed.otf</fontPath>
+            <fontPath>./fonts/Exo2-RegularCondensed.otf</fontPath>
             <fontSize>0.032</fontSize>
             <letterCase>uppercase</letterCase>
             <lineSpacing>1.2</lineSpacing>
