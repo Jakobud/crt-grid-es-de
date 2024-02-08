@@ -35,15 +35,26 @@
     </aspectRatio> -->
 
     <view name="system, gamelist">
-        <!-- <image name="background">
+        <image name="background">
             <pos>0 0</pos>
             <size>1 1</size>
-            <path>./core/images/background.png</path>
+            <path>./images/background.png</path>
             <tile>true</tile>
-            <color>${backgroundColor}</color>
+            <color>636363</color>
             <zIndex>0</zIndex>
         </image>
-        <image name="consolegame">
+
+        <image name="helpBackgroundTop">
+            <pos>0 1</pos>
+            <size>1 .06</size>
+            <origin>0 1</origin>
+            <path>./images/background.png</path>
+            <tile>true</tile>
+            <color>484848</color>
+            <zIndex>0</zIndex>
+        </image>
+
+        <!--<image name="consolegame">
             <pos>0.02 0.17</pos>
             <maxSize>0.4 0.15</maxSize>
             <origin>0 1</origin>
@@ -90,10 +101,10 @@
             <unfocusedItemOpacity>1.0</unfocusedItemOpacity>
             <imageRelativeScale>0.9</imageRelativeScale>
             <imageFit>contain</imageFit>
-            <backgroundImage>./images/grid_frame.svg</backgroundImage>
-            <backgroundRelativeScale>1.0</backgroundRelativeScale>
-            <backgroundColor>424242</backgroundColor>
-            <selectorImage>./images/grid_frame.svg</selectorImage>
+            <!-- <backgroundImage>./images/grid_frame.svg</backgroundImage> -->
+            <!-- <backgroundRelativeScale>1.0</backgroundRelativeScale> -->
+            <!-- <backgroundColor>424242</backgroundColor> -->
+            <!-- <selectorImage>./images/grid_frame.svg</selectorImage> -->
             <selectorRelativeScale>1.0</selectorRelativeScale>
             <selectorLayer>middle</selectorLayer>
             <selectorColor>FF3333</selectorColor>
@@ -105,13 +116,7 @@
             <lineSpacing>1.2</lineSpacing>
             <fadeAbovePrimary>true</fadeAbovePrimary>
         </grid>
-        <!-- <image name="controller">
-            <pos>0.78 0.17</pos>
-            <maxSize>0.1 0.15</maxSize>
-            <origin>1 1</origin>
-            <path>${systemControllerImage}</path>
-        </image>
-        <image name="backframe2">
+        <!--<image name="backframe2">
             <pos>0.5 0.19</pos>
             <size>0.96 0.735</size>
             <origin>0.5 0</origin>
@@ -143,33 +148,70 @@
 
     <view name="gamelist">
         <grid name="gamelistGrid">
-            <pos>0.51 0.05</pos>
-            <size>.9 .8</size>
-            <origin>0.5 0</origin>
+            <pos>0.515 0.55</pos>
+            <size>0.9 .9</size>
+            <origin>0.5 0.5</origin>
             <imageType>titlescreen</imageType>
-            <itemSize>0.13 -1</itemSize>
-            <itemScale>1</itemScale>
-            <itemSpacing>0.022 -1</itemSpacing>
-            <fractionalRows>false</fractionalRows>
+            <itemSize>0.17 0.16</itemSize>
+            <itemScale>1.5</itemScale>
+            <itemSpacing>0.005 0.01</itemSpacing>
             <itemTransitions>animate</itemTransitions>
+            <scaleInwards>true</scaleInwards>
             <rowTransitions>animate</rowTransitions>
             <unfocusedItemOpacity>1.0</unfocusedItemOpacity>
             <imageRelativeScale>0.9</imageRelativeScale>
             <imageFit>contain</imageFit>
             <backgroundImage>./images/grid_frame.svg</backgroundImage>
             <backgroundRelativeScale>1.0</backgroundRelativeScale>
-            <backgroundColor>424242</backgroundColor>
+            <backgroundColor>00000000</backgroundColor>
             <selectorImage>./images/grid_frame.svg</selectorImage>
-            <selectorRelativeScale>1.0</selectorRelativeScale>
             <selectorLayer>middle</selectorLayer>
-            <selectorColor>FF3333</selectorColor>
+            <selectorColor>00000000</selectorColor>
             <textRelativeScale>0.8</textRelativeScale>
             <textColor>F0F0F0</textColor>
             <fontPath>./fonts/Exo2-RegularCondensed.otf</fontPath>
-            <fontSize>0.032</fontSize>
+            <fontSize>0.02</fontSize>
             <letterCase>uppercase</letterCase>
             <lineSpacing>1.2</lineSpacing>
         </grid>
+
+        <image name="gameLogo">
+            <pos>.95 .03</pos>
+            <maxSize>0.25 .3</maxSize>
+            <origin>1 0</origin>
+            <imageType>marquee</imageType>
+            <zIndex>53</zIndex>
+        </image>
+
+        <image name="systemLogo">
+            <pos>0.05 0.05</pos>
+            <maxSize>.25 .25</maxSize>
+            <origin>0 0</origin>
+            <path>${systemLogo}</path>
+            <zIndex>53</zIndex>
+        </image>
+
+        <image name="gamelistStripe">
+            <pos>0 0</pos>
+            <size>1 .15</size>
+            <path>./images/background.png</path>
+            <tile>true</tile>
+            <color>484848</color>
+            <zIndex>52</zIndex>
+        </image>
+
+        <image name="gamelistTopShadow">
+            <pos>0 .15</pos>
+            <size>1 .03</size>
+            <path>./images/background.png</path>
+            <tile>true</tile>
+            <color>00000099</color>
+            <colorEnd>00000000</colorEnd>
+            <gradientType>vertical</gradientType>
+            <zIndex>51</zIndex>
+        </image>
+
+
 
         <!-- <image name="backframe2">
             <pos>0.5 0.19</pos>
@@ -178,14 +220,8 @@
             <path>./core/images/frame.png</path>
             <color>181818</color>
             <zIndex>10</zIndex>
-        </image>
-        <image name="logo">
-            <pos>0.78 0.17</pos>
-            <maxSize>0.32 0.13</maxSize>
-            <origin>1 1</origin>
-            <path>${systemLogo}</path>
-        </image>
-        <text name="gameName">
+        </image> -->
+        <!--<text name="gameName">
             <pos>0.92 0.225</pos>
             <size>0.55 0.08</size>
             <origin>1 0</origin>

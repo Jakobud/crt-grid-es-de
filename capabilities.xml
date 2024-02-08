@@ -49,11 +49,11 @@
         <startupToGamelist>slide</startupToGamelist>
     </transitions>
 
-    <suppressTransitionProfiles>
+    <!-- <suppressTransitionProfiles>
         <entry>builtin-instant</entry>
         <entry>builtin-slide</entry>
         <entry>builtin-fade</entry>
-    </suppressTransitionProfiles>
+    </suppressTransitionProfiles> -->
 
     <!-- <variant name="withVideos">
         <label>Textlist with videos</label>
